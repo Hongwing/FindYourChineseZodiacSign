@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find your Zodiac</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,6 +42,12 @@
             color: white;
             margin-bottom: 20px;
         }
+
+        .img-zodiac {
+            border-radius: 5px;
+            width: 280px;
+            height: 280px;
+        }
     </style>
 </head>
 
@@ -49,6 +56,7 @@
         inscribed Spring Festival, social practices of the Chinese people in celebration of the traditional new year, on
         the Representative List of the Intangible Cultural Heritage of Humanity. 🎉🎉🎉</div>
 
+    <img class="img-zodiac" src="./assets/zodiac.webp" alt="zodiac">
     <h1>Find Your Chinese Zodiac Sign</h1>
     <p>Please enter the year to find the corresponding zodiac sign：</p>
     <input type="number" id="yearInput" placeholder="Enter the year">
@@ -87,7 +95,7 @@
             const zodiac = zodiacMap[zodiacIndex];
 
             resultDiv.innerHTML = `<p>The Chinese zodiac sign for ${year} is </p>
-                                    <p class="emoji"><b>${zodiac.name}</b> ${zodiac.emoji}</p>`
+                                    <p class="emoji animate__animated animate__jello"><b>${zodiac.name}</b> ${zodiac.emoji}</p>`
         }
     </script>
 </body>
